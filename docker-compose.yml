@@ -8,6 +8,7 @@ services:
                   - ./examples/hello-world:/tmp/hello-world
                   - ./examples/png2snes/hello-world:/tmp/png2snes-hello-world
                   - ./examples/Neviksti/walker-example:/tmp/walker-example
+                  - ./examples/Neviksti/show:/tmp/show                  
 
 networks:
   default:

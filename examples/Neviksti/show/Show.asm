@@ -9,7 +9,7 @@
 ;------------------------------------------------------------------------
 
 ;=== Include MemoryMap, VectorTable, HeaderInfo ===
-.INCLUDE "show.inc"
+.INCLUDE "Show.inc"
 
 ;=== Global Variables ===
 
@@ -31,11 +31,11 @@
 	.ORG 0
 	.SECTION "PictureData\@"
 	clr_\1:
-		.incbin "Pictures\\\1.clr"	
+		.INCBIN "Pictures\\\1.clr"	
 	map_\1:
-		.incbin "Pictures\\\1.map"	
+		.INCBIN "Pictures\\\1.map"	
 	pic_\1:
-		.incbin "Pictures\\\1.pic"	
+		.INCBIN "Pictures\\\1.pic"	
 	endpic_\1:
 	.ENDS
 .ENDM
