@@ -3,16 +3,9 @@ version: '3'
 services:
       examples:
             image: "fabiosoaza/snes-dev-tools:v0.1.0" 
-            command: /bin/bash -c "cd /tmp/hello-world/ && ./build.sh HelloWorld && cd /tmp/png2snes-hello-world/ && make && cd /tmp/walker-example/ && ./build_game.sh"
+            command: /bin/bash -c "cd /tmp/hello-world/ && ./build.sh HelloWorld && cd /tmp/png2snes-hello-world/ && make && cd /tmp/walker-example/ && ./build_game.sh && cd /tmp/slide-show && ./build_game.sh"
             volumes: 
                   - ./examples/hello-world:/tmp/hello-world
                   - ./examples/png2snes/hello-world:/tmp/png2snes-hello-world
                   - ./examples/Neviksti/walker-example:/tmp/walker-example
-                  - ./examples/Neviksti/show:/tmp/show                  
-
-networks:
-  default:
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.20.0.1/16
+                  - ./examples/Neviksti/show:/tmp/slide-show                  
